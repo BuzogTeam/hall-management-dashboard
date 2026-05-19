@@ -7,8 +7,10 @@ import {
   ScrollRestoration,
 } from "react-router";
 
-import type { Route } from "./+types/root";
+// import type { Route } from "./+types/root";
 import "./app.css";
+import { TooltipProvider } from "./components/ui/tooltip";
+import type { Route } from "./+types/root";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,7 +35,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
+
         <ScrollRestoration />
         <Scripts />
       </body>
