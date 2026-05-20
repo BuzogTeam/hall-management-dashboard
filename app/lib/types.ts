@@ -64,7 +64,7 @@ export interface Batch {
 
 export interface Lecture {
   id: string
-  day_of_week: number
+  day_of_week: string
   start_at: string
   end_at: string
   subject_id: string
@@ -81,15 +81,25 @@ export interface Lecture {
   batch?: Batch
 }
 
-export const DAYS_OF_WEEK = [
-  { value: "SAT", label: "السبت" },
-  { value: "SUN", label: "الاحد" },
-  { value: "MON", label: "الاثنين" },
-  { value: "TUE", label: "الثلاثا" },
-  { value: "WED", label: "الاربعا" },
-  { value: "THU", label: "الخميس" },
-  { value: "FRI", label: "الجمعة" },
-]
+// export const DAYS_OF_WEEK = [
+//   { value: "SAT", label: "السبت" },
+//   { value: "SUN", label: "الاحد" },
+//   { value: "MON", label: "الاثنين" },
+//   { value: "TUE", label: "الثلاثا" },
+//   { value: "WED", label: "الاربعا" },
+//   { value: "THU", label: "الخميس" },
+//   { value: "FRI", label: "الجمعة" },
+// ]
+
+export const DAYS_OF_WEEK = <Record<string, string>>{
+  "SAT":  "السبت",
+  "SUN":  "الاحد",
+  "MON":  "الاثنين",
+  "TUE":  "الثلاثا",
+  "WED":  "الاربعا",
+  "THU":  "الخميس",
+  "FRI":  "الجمعة",
+}
 
 export const HALL_TYPES = [
   { value: "قاعة", label: "قاعة", color: "bg-green-300 text-green-800" },

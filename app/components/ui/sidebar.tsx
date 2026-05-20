@@ -149,7 +149,7 @@ function SidebarProvider({
 }
 
 function Sidebar({
-  side = "left",
+  side = "right",
   variant = "sidebar",
   collapsible = "offcanvas",
   className,
@@ -157,7 +157,7 @@ function Sidebar({
   dir,
   ...props
 }: React.ComponentProps<"div"> & {
-  side?: "left" | "right"
+  side?: "right" | "right"
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
 }) {

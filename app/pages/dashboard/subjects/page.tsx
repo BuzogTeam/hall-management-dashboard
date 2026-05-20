@@ -1,5 +1,5 @@
 import { createClient } from "~/lib/supabase/client";
-import { SubjectsTable } from "./departments-table";
+import { SubjectsTable } from "./subjects-table";
 import { useEffect, useState } from "react";
 
 export default function Departments() {

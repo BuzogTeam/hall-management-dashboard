@@ -61,6 +61,11 @@ const data = {
       url: "/dashboard/subjects",
       icon: <BookAIcon />,
     },
+    {
+      title: "Lectures",
+      url: "/dashboard/lectures",
+      icon: <FileTextIcon />,
+    },
   ],
   navSecondary: [
     {

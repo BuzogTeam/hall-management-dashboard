@@ -12,5 +12,6 @@ export default [
         route("levels", "pages/dashboard/levels/page.tsx"),
         route("instructors", "pages/dashboard/instructors/page.tsx"),
         route("subjects", "pages/dashboard/subjects/page.tsx"),
+        route("lectures", "pages/dashboard/lectures/page.tsx"),
     ]),
 ] satisfies RouteConfig;
