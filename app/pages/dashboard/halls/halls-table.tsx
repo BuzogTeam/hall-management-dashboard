@@ -15,7 +15,7 @@ const columns: ColumnDef<Hall>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Title
+          العنوان
           <SortAscIcon className="ml-2 h-4 w-4" />
         </Button>
       );
@@ -24,16 +24,16 @@ const columns: ColumnDef<Hall>[] = [
   },
   {
     accessorKey: "building.title",
-    header: "Building",
+    header: "المبنى",
     cell: ({ row }) => row.original.building?.title || "-",
   },
   {
     accessorKey: "floor",
-    header: "Floor",
+    header: "الطابق",
   },
   {
     accessorKey: "type",
-    header: "Type",
+    header: "المكان",
     cell: ({ row }) => {
       const type = HALL_TYPES.find((t) => t.value === row.original.type);
       return <span className={`font-bold py-1 px-3 rounded-2xl  ${type?.color}`}>{type ? type.label : row.original.type}</span>;
@@ -48,7 +48,7 @@ const columns: ColumnDef<Hall>[] = [
           <Button variant="ghost" size="icon" asChild>
             <Link to={`/dashboard/halls/${hall.id}/edit`}>
               <Edit2 className="h-4 w-4" />
-              <span className="sr-only">Edit {hall.title}</span>
+              <span className="sr-only">تعديل {hall.title}</span>
             </Link>
           </Button>
           <DeleteDialog id={hall.id} table="halls" itemName={hall.title} />

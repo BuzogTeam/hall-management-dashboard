@@ -20,7 +20,10 @@ const columns: ColumnDef<Batch>[] = [
         </Button>
       );
     },
-    cell: ({ row }) => (row.original.department?.title || "N/A") + " - " + (row.original.level?.title || "N/A"),
+    cell: ({ row }) =>
+      (row.original.department?.title || "N/A") +
+      " - " +
+      (row.original.level?.title || "N/A"),
   },
   {
     accessorKey: "created_at",
@@ -37,16 +40,12 @@ const columns: ColumnDef<Batch>[] = [
       return (
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <Link to={`/dashboard/batchs/${batch.id}/edit`}>
+            <Link to={`/dashboard/batches/${batch.id}/edit`}>
               <Edit2 className="h-4 w-4" />
               <span className="sr-only">Edit</span>
             </Link>
           </Button>
-          <DeleteDialog
-            id={batch.id}
-            table="batchs"
-            itemName={""}
-          />
+          <DeleteDialog id={batch.id} table="batches" itemName={""} />
         </div>
       );
     },
@@ -58,7 +57,14 @@ interface BatchesTableProps {
 }
 
 export function BatchesTable({ data }: BatchesTableProps) {
-    return (
-       <EntityTable columns={columns} data={data} createHref="/dashboard/batchs/new"/>
-    );
+  return (
+    <EntityTable
+      columns={columns}
+      data={data}
+      createHref="/dashboard/batches/new"
+      searchKey="department_id"
+      searchPlaceholder=" بحث بالتخصص..."
+      createLabel="إضافة دفعة"
+    />
+  );
 }

@@ -8,24 +8,6 @@ import { EntityTable } from "~/components/entity-table";
 import { Button } from "~/components/ui/button";
 import { DAYS_OF_WEEK, type Lecture } from "~/lib/types";
 
-interface Subject {
-  id: string;
-  title: string;
-}
-interface Instructor {
-  id: string;
-  name: string;
-}
-interface Hall {
-  id: string;
-  title: string;
-}
-interface Batch {
-  id: string;
-  name: string;
-}
-
-// دالة مساعدة لتنسيق الوقت من HH:MM:SS إلى HH:MM
 const formatTime = (timeStr: string) => timeStr.slice(0, 5);
 
 const columns: ColumnDef<Lecture>[] = [
@@ -125,7 +107,7 @@ export function LecturesTable({ data }: LecturesTableProps) {
     <EntityTable
       columns={columns}
       data={data}
-      searchKey="group" // يبحث داخل حقل المجموعة، أو يمكنك تعديله حسب الحاجة
+      searchKey="group"
       searchPlaceholder="البحث برقم المجموعه..."
       createHref="/dashboard/lectures/new"
       createLabel="إضافة محاضرة"

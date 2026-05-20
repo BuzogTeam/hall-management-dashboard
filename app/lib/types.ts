@@ -25,7 +25,7 @@ export interface Hall {
   id: string
   title: string
   building_id: string
-  floor: number
+  floor: string
   type: "lecture" | "lab" | "seminar"
   created_at: string
   updated_at: string
@@ -35,7 +35,7 @@ export interface Hall {
 export interface Instructor {
   id: string
   name: string
-  type: "professor" | "assistant" | "teaching_assistant"
+  type: "دكتور" | "مهندس" | "استاذ"
   created_at: string
   updated_at: string
 }
@@ -44,7 +44,7 @@ export interface Subject {
   id: string
   title: string
   english_title: string | null
-  type: "lecture" | "practical" | "lab"
+  type: "نظري" | "تمارين" | "عملي"
   parent_id: string | null
   created_at: string
   updated_at: string
@@ -90,6 +90,13 @@ export interface Lecture {
 //   { value: "THU", label: "الخميس" },
 //   { value: "FRI", label: "الجمعة" },
 // ]
+
+export const FLOOR_OPTIONS = [
+  { value: "الدور الاول", label: "الطابق الأول" },
+  { value: "الدور الثاني", label: "الطابق الثاني" },
+  { value: "الدور الثالث", label: "الطابق الثالث" },
+  { value: "الدور الرابع", label: "الطابق الرابع" },
+]
 
 export const DAYS_OF_WEEK = <Record<string, string>>{
   "SAT":  "السبت",

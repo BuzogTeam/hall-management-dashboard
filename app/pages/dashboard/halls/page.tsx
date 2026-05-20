@@ -29,8 +29,6 @@ export default function Halls() {
     return <div className="p-4">جاري تحميل البيانات...</div>;
   }
 
-  
-
   return  <div className="p-4">
       <HallsTable data={halls} />
   </div>

@@ -45,7 +45,7 @@ export function EntityTable<TData, TValue>({
   searchKey,
   searchPlaceholder = "Search...",
   createHref,
-  createLabel = "Create New",
+  createLabel = "اضافة جديد",
 }: EntityTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])

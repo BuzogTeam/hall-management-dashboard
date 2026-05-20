@@ -21,68 +21,68 @@ const data = {
     avatar: "#",
   },
   navMain: [
+    // {
+    //   title: "Dashboard",
+    //   url: "#",
+    //   icon: <LayoutDashboardIcon />,
+    // },
     {
-      title: "Dashboard",
-      url: "#",
-      icon: <LayoutDashboardIcon />,
-    },
-    {
-      title: "Buildings",
+      title: "المباني",
       url: "/dashboard/buildings",
       icon: <Building />,
     },
     {
-      title: "Halls",
+      title: "القاعات",
       url: "/dashboard/halls",
       icon: <HomeIcon />,
     },
     {
-      title: "Departments",
+      title: "الاقسام",
       url: "/dashboard/departments",
       icon: <School />,
     },
     {
-      title: "Levels",
+      title: "المستويات",
       url: "/dashboard/levels",
       icon: <ChartBarIcon />,
     },
     {
-      title: "Batches",
+      title: "الدفع",
       url: "/dashboard/batches",
       icon: <UsersIcon />,
     },
     {
-      title: "Instructors",
+      title: "المحاضرين",
       url: "/dashboard/instructors",
       icon: <UserStar />,
     },
     {
-      title: "Subjects",
+      title: "المقررات",
       url: "/dashboard/subjects",
       icon: <BookAIcon />,
     },
     {
-      title: "Lectures",
+      title: "المحاضرات",
       url: "/dashboard/lectures",
       icon: <FileTextIcon />,
     },
   ],
   navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: <Settings2Icon />,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: <CircleHelpIcon />,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: <SearchIcon />,
-    },
+    // {
+    //   title: "Settings",
+    //   url: "#",
+    //   icon: <Settings2Icon />,
+    // },
+    // {
+    //   title: "Get Help",
+    //   url: "#",
+    //   icon: <CircleHelpIcon />,
+    // },
+    // {
+    //   title: "Search",
+    //   url: "#",
+    //   icon: <SearchIcon />,
+    // },
   ],
   documents: [
     {
