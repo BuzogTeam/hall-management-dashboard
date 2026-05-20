@@ -82,29 +82,30 @@ export interface Lecture {
 }
 
 export const DAYS_OF_WEEK = [
-  { value: 0, label: "Sunday" },
-  { value: 1, label: "Monday" },
-  { value: 2, label: "Tuesday" },
-  { value: 3, label: "Wednesday" },
-  { value: 4, label: "Thursday" },
-  { value: 5, label: "Friday" },
-  { value: 6, label: "Saturday" },
+  { value: "SAT", label: "السبت" },
+  { value: "SUN", label: "الاحد" },
+  { value: "MON", label: "الاثنين" },
+  { value: "TUE", label: "الثلاثا" },
+  { value: "WED", label: "الاربعا" },
+  { value: "THU", label: "الخميس" },
+  { value: "FRI", label: "الجمعة" },
 ]
 
 export const HALL_TYPES = [
-  { value: "lecture", label: "Lecture Hall" },
-  { value: "lab", label: "Laboratory" },
-  { value: "seminar", label: "Seminar Room" },
+  { value: "قاعة", label: "قاعة", color: "bg-green-300 text-green-800" },
+  { value: "معمل", label: "معمل", color: "bg-blue-300 text-blue-800" },
+  { value: "مدرج", label: "مدرج", color: "bg-amber-300 text-amber-800" },
+  { value: "مرسم", label: "مرسم", color: "bg-purple-300 text-purple-800" },
 ]
 
 export const INSTRUCTOR_TYPES = [
-  { value: "professor", label: "Professor" },
-  { value: "assistant", label: "Assistant" },
-  { value: "teaching_assistant", label: "Teaching Assistant" },
+  { value: "دكتور", label: "دكتور" },
+  { value: "مهندس", label: "مهندس" },
+  { value: "استاذ", label: "استاذ" },
 ]
 
 export const SUBJECT_TYPES = [
-  { value: "lecture", label: "Lecture" },
-  { value: "practical", label: "Practical" },
-  { value: "lab", label: "Lab" },
+  { value: "نظري", label: "نظرى" },
+  { value: "تمارين", label: "تمارين" },
+  { value: "عملي", label: "عملى" },
 ]
