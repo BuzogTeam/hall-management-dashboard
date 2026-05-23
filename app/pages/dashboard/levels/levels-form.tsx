@@ -61,7 +61,6 @@ export default function LevelForm() {
 
     const payload = {
       title,
-      updated_at: new Date().toISOString(),
     };
 
     let error;

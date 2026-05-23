@@ -73,7 +73,6 @@ export default function InstructorForm() {
     const payload = {
       name,
       type,
-      updated_at: new Date().toISOString(),
     };
 
     let error;

@@ -59,7 +59,6 @@ export default function DepartmentForm() {
       title,
       abbreviation,
       num_levels: numLevels,
-      updated_at: new Date().toISOString(),
     };
 
     let error;

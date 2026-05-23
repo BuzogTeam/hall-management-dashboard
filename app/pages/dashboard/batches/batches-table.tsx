@@ -1,56 +1,6 @@
-import type { ColumnDef } from "@tanstack/react-table";
-import { Edit, Edit2, SortAscIcon } from "lucide-react";
-import { Link } from "react-router";
-import { DeleteDialog } from "~/components/delete-dialog";
-import { EntityTable } from "~/components/entity-table";
-import { Button } from "~/components/ui/button";
+// app/components/batches-table.tsx
+import { EntityDataTable } from "~/components/entity-data-table";
 import type { Batch } from "~/lib/types";
-
-const columns: ColumnDef<Batch>[] = [
-  {
-    accessorKey: "title",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Title
-          <SortAscIcon className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
-    cell: ({ row }) =>
-      (row.original.department?.title || "N/A") +
-      " - " +
-      (row.original.level?.title || "N/A"),
-  },
-  {
-    accessorKey: "created_at",
-    header: "Created",
-    cell: ({ row }) => {
-      const date = new Date(row.original.created_at);
-      return date.toLocaleDateString();
-    },
-  },
-  {
-    id: "actions",
-    cell: ({ row }) => {
-      const batch = row.original;
-      return (
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild>
-            <Link to={`/dashboard/batches/${batch.id}/edit`}>
-              <Edit2 className="h-4 w-4" />
-              <span className="sr-only">Edit</span>
-            </Link>
-          </Button>
-          <DeleteDialog id={batch.id} table="batches" itemName={""} />
-        </div>
-      );
-    },
-  },
-];
 
 interface BatchesTableProps {
   data: Batch[];
@@ -58,13 +8,19 @@ interface BatchesTableProps {
 
 export function BatchesTable({ data }: BatchesTableProps) {
   return (
-    <EntityTable
-      columns={columns}
+    <EntityDataTable
       data={data}
+      entityName="batches"
       createHref="/dashboard/batches/new"
-      searchKey="department_id"
-      searchPlaceholder=" بحث بالتخصص..."
       createLabel="إضافة دفعة"
+      titleHeader="الدفعة"
+      titleCell={(batch) =>
+        `${batch.department?.title || "N/A"} - ${batch.level?.title || "N/A"}`
+      }
+      showCreatedAt={true}
+      createdAtHeader="تاريخ الإنشاء"
+      searchKey="department_id"
+      searchPlaceholder="بحث بالتخصص..."
     />
   );
 }

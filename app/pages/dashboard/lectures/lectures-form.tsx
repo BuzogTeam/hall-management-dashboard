@@ -143,7 +143,6 @@ export default function LectureForm() {
       batch_id: batchId,
       canceled,
       group: group || null,
-      updated_at: new Date().toISOString(),
     };
 
     let error;

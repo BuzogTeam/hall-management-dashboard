@@ -96,7 +96,6 @@ export default function SubjectForm() {
       english_title: englishTitle || null,
       type,
       parent_id: parentId || null,
-      updated_at: new Date().toISOString(),
     };
 
     let error;

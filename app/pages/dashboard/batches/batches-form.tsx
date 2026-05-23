@@ -117,7 +117,6 @@ export default function BatchForm() {
       department_id: departmentId,
       level_id: levelId,
       department_abbr: deptAbbr,
-      updated_at: new Date().toISOString(),
     };
 
     let error;
